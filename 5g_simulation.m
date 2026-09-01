@@ -39,7 +39,7 @@ for idx = 1:length(snrRange)
     h = (randn(size(noisySignal)) + 1j * randn(size(noisySignal))) / sqrt(2);
     receivedSignal = noisySignal .* h;
     
-    % 新增的一行（信道均衡）
+    % addition
     receivedSignal = receivedSignal ./ h;
 
     % FFT (OFDM Demodulation)
